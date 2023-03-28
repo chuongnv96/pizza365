@@ -27,6 +27,56 @@ $(document).ready(function () {
             return vActualPriceVND;
         },
     };
+    var gDrinks = [
+        {
+            maNuocUong: "TRATAC",
+            tenNuocUong: "Trà tắc",
+            donGia: 10000,
+            ghiChu: null,
+            ngayTao: 1615177934000,
+            ngayCapNhat: 1615177934000,
+        },
+        {
+            maNuocUong: "COCA",
+            tenNuocUong: "Cocacola",
+            donGia: 15000,
+            ghiChu: null,
+            ngayTao: 1615177934000,
+            ngayCapNhat: 1615177934000,
+        },
+        {
+            maNuocUong: "PEPSI",
+            tenNuocUong: "Pepsi",
+            donGia: 15000,
+            ghiChu: null,
+            ngayTao: 1615177934000,
+            ngayCapNhat: 1615177934000,
+        },
+        {
+            maNuocUong: "LAVIE",
+            tenNuocUong: "Lavie",
+            donGia: 5000,
+            ghiChu: null,
+            ngayTao: 1615177934000,
+            ngayCapNhat: 1615177934000,
+        },
+        {
+            maNuocUong: "TRASUA",
+            tenNuocUong: "Trà sữa trân châu",
+            donGia: 40000,
+            ghiChu: null,
+            ngayTao: 1615177934000,
+            ngayCapNhat: 1615177934000,
+        },
+        {
+            maNuocUong: "FANTA",
+            tenNuocUong: "Fanta",
+            donGia: 15000,
+            ghiChu: null,
+            ngayTao: 1615177934000,
+            ngayCapNhat: 1615177934000,
+        },
+    ];
     /*** REGION 2 - Vùng gán / thực thi hàm xử lý sự kiện cho các elements */
     // Sự kiện load trang
     onPageLoading();
@@ -60,7 +110,8 @@ $(document).ready(function () {
     function onPageLoading() {
         "use strict";
         // Gọi Api lấy danh sách đồ uống
-        callApiGetAllDrink();
+        // callApiGetAllDrink();
+        loadDrinkToSelect(gDrinks);
     }
     // Hàm xử lí sự kiện nhấn nút tạo đơn trên modal
     function onBtnCreateOrderClick() {
